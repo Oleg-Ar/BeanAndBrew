@@ -4,7 +4,7 @@
 /* дизайн-токены (цвета, шрифты, отступы) */
 @font-face {
   font-family: 'Playfair Display Variable';
-  src: url('/assets/fonts/PlayfairDisplay-Variable.woff2') format('woff2');
+  src: url('assets/fonts/PlayfairDisplay-Variable.woff2') format('woff2');
   font-weight: 400 900;
   font-style: normal;
   font-display: swap;
@@ -12,7 +12,7 @@
 
 @font-face {
   font-family: 'Nunito Sans Variable';
-  src: url('/assets/fonts/NunitoSans-Variable.woff2') format('woff2');
+  src: url('assets/fonts/NunitoSans-Variable.woff2') format('woff2');
   font-weight: 200 1000;
   font-stretch: 75% 125%;
   font-style: normal;
@@ -110,19 +110,19 @@
   --spacing-section-lg: calc(var(--gutter) * 3);
 
   --spacing-1: 0.25rem; /* 4px  */
-  --spacing-2: 0.5rem;  /* 8px  */
+  --spacing-2: 0.5rem; /* 8px  */
   --spacing-3: 0.75rem; /* 12px */
-  --spacing-4: 1rem;    /* 16px (Base) */
+  --spacing-4: 1rem; /* 16px (Base) */
 
-  --spacing-6: 1.5rem;  /* 24px */
-  --spacing-8: 2rem;    /* 32px */
+  --spacing-6: 1.5rem; /* 24px */
+  --spacing-8: 2rem; /* 32px */
 
   --spacing-10: 2.5rem; /* 40px */
-  --spacing-12: 3rem;   /* 48px */
-  --spacing-16: 4rem;   /* 64px */
-  --spacing-20: 5rem;   /* 80px */
-  --spacing-24: 6rem;   /* 96px */
-  --spacing-32: 8rem;   /* 128px */
+  --spacing-12: 3rem; /* 48px */
+  --spacing-16: 4rem; /* 64px */
+  --spacing-20: 5rem; /* 80px */
+  --spacing-24: 6rem; /* 96px */
+  --spacing-32: 8rem; /* 128px */
 
   --radius-sm: 0.25rem;
   --radius-md: 0.5rem;
