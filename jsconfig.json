@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "target": "ES2024",
+    "jsx": "react-jsx",
+    "allowImportingTsExtensions": true,
+    "strict": true,
+    "paths": {
+      "@/*": ["./*"]
+    }
+  },
+  "include": ["**/*"],
+  "exclude": ["../node_modules"]
+}

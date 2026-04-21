@@ -1,0 +1,94 @@
+/* * { */
+/*   outline: 1px solid red; */
+/* } */
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100svh;
+}
+
+main {
+  flex-grow: 1;
+
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: stretch;
+  align-items: center;
+  gap: var(--gutter);
+  padding-inline: var(--gutter);
+  padding-block: var(--spacing-section);
+  width: min(1350px, 100vw);
+  margin: 0 auto;
+  /* to center main inside body */
+}
+
+#header,
+#footer {
+  flex-shrink: 0;
+  /* Футер не будет сжиматься */
+}
+
+.form-wraper {
+  flex-grow: 1;
+  flex-basis: 400px;
+
+  justify-content: center;
+  padding: var(--spacing-8);
+}
+
+.picture {
+  flex-grow: 1;
+  flex-basis: 400px;
+  max-width: 780px;
+  display: flex;
+  justify-content: center;
+}
+
+.picture img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  /* Картинка не искажается */
+  border-radius: var(--radius-lg);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-4);
+}
+
+form div {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+label {
+  padding-top: var(--spacing-4);
+  font-weight: var(--font-weight-medium);
+}
+
+input {
+  width: 100%;
+}
+
+.booking-btn {
+  margin-top: var(--radius-lg);
+  background-color: var(--color-bg-secondary);
+  color: var(--color-bg-primary);
+  transition: var(--transition-base);
+}
+
+.booking-btn:hover {
+  background-color: var(--color-bg-secondary-hover);
+}
+
+.booking-btn:active {
+  background-color: var(--color-bg-secondary-active);
+}

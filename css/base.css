@@ -1,0 +1,154 @@
+/* ============================================ */
+/* ================ BASE STYLES =============== */
+/* ============================================ */
+
+/* --- BODY --- */
+body {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+
+  /* Включает автоматическую подстройку формы букв под размер шрифта */
+  font-optical-sizing: auto;
+  /* Стандартные улучшения отрисовки */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  min-height: 100svh;
+  color: var(--color-text-main);
+  background-color: var(--color-bg-primary);
+  /* Плавная смена размера при ресайзе */
+  transition: var(--transition-base);
+}
+
+/* --- TYPOGRAPHY --- */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-family-title);
+  font-weight: var(--heading-font-weight);
+  line-height: var(--heading-line-height);
+  /* Если хотите чуть поджать заголовки (ось wdth), добавьте это: */
+  font-stretch: 90%;
+  letter-spacing: var(--heading-letter-spacing);
+  text-wrap: balance;
+  color: var(--color-text-title);
+  /* для безопасности, уже сброшено в reset.css */
+  margin: 0;
+  transition: var(--transition-base);
+}
+
+h1 {
+  font-size: var(--step-5);
+}
+
+h2 {
+  font-size: var(--step-4);
+}
+
+h3 {
+  font-size: var(--step-3);
+}
+
+h4 {
+  font-size: var(--step-2);
+}
+
+h5 {
+  font-size: var(--step-1);
+}
+
+h6 {
+  font-size: var(--step-0);
+  font-variation-settings: 'wght' 800;
+}
+
+/* --- PARAGRAPHS --- */
+p {
+  color: var(--color-text-main);
+  margin: 0;
+  /* сброс уже в reset.css */
+  overflow-wrap: break-word;
+}
+
+p:where(:not([class]):not(:last-child)) {
+  margin-bottom: var(--spacing-6);
+}
+
+/* --- LINKS --- */
+a:not([class]) {
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+a:not([class]):hover {
+  text-decoration: none;
+}
+
+/* --- LISTS --- */
+ul:not([class]),
+ol:not([class]) {
+  padding-left: 1.5em;
+}
+
+/* --- BUTTONS --- */
+button {
+  border-radius: var(--radius-md);
+  font: inherit;
+  padding: 0.5em 1em;
+  cursor: pointer;
+}
+
+/* --- FORMS --- */
+input,
+textarea,
+select {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 0.5em 0.75em;
+  font: inherit;
+  color: var(--color-text-main);
+  background-color: var(--color-bg-surface);
+}
+
+/* --- PLACEHOLDER --- */
+::placeholder {
+  color: var(--color-text-muted);
+}
+
+/* --- TABLES --- */
+table {
+  width: 100%;
+}
+
+th,
+td {
+  padding: 0.5em;
+  text-align: left;
+}
+
+/* --- FOCUS & ACCESSIBILITY --- */
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 4px;
+}
+
+::selection {
+  background-color: var(--color-accent);
+  color: #000;
+}
+
+/* ================ Кнопки и интерактив ================ */
+/* Минимальная область клика на мобильных устройствах */
+@media (max-width: 768px) {
+  button,
+  a:where([class]),
+  label {
+    min-width: 44px;
+    min-height: 44px;
+    }
+}

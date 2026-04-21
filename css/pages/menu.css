@@ -1,0 +1,124 @@
+/* * { */
+/*   outline: 1px solid red; */
+/* } */
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100svh;
+}
+
+main {
+  flex-grow: 1;
+
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: stretch;
+  align-items: center;
+  gap: var(--gutter);
+  padding-block: var(--spacing-section);
+  padding-inline: var(--gutter);
+  width: min(1550px, 100vw);
+  margin: 0 auto;
+}
+
+#header,
+#footer {
+  flex-shrink: 0;
+  /* Футер не будет сжиматься */
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  flex-grow: 1;
+  flex-basis: 500px;
+  align-items: center;
+}
+
+.about-wraper {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.video {
+  flex-grow: 1;
+  flex-basis: 500px;
+  max-width: 780px;
+  display: flex;
+  justify-content: center;
+}
+
+.menu-grid-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.item-header {
+  display: flex;
+  align-items: baseline;
+  font-family: var(--font-family-title);
+  color: var(--color-bg-secondary);
+  font-size: var(--step-1);
+}
+
+.dots {
+  flex-grow: 1;
+  border-bottom: 2px dotted var(--color-bg-secondary);
+  margin: 0 10px;
+}
+
+.price {
+  flex-shrink: 0;
+}
+
+.description {
+  font-size: var(--step-0);
+  color: var(--color-text-main);
+  margin-top: 5px;
+}
+
+.tabs {
+  display: flex;
+  flex-direction: column;
+}
+
+.c-btn--art {
+  background-color: var(--color-bg-secondary);
+  color: var(--color-text-on-dark);
+  width: 40px;
+  height: min(9em, 120px);
+  border-radius: 15px 0 0 15px;
+  padding: 10px;
+  writing-mode: sideways-lr;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    background-color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.c-btn--art:hover {
+  background-color: var(--color-accent-hover);
+}
+
+.c-btn--art:active {
+  background-color: var(--color-accent-active);
+  transform: scale(0.96);
+}
+.c-btn--art.active{
+    background: var(--color-accent);
+    
+}
+

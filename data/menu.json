@@ -1,0 +1,27 @@
+{
+  "drinks": [
+    { "name": "Espresso", "price": "£2.50", "desc": "Rich and strong single shot coffee." },
+    { "name": "Americano", "price": "£2.80", "desc": "Smooth coffee made with espresso and hot water." },
+    { "name": "Cappuccino", "price": "£3.20", "desc": "Espresso with steamed milk and a layer of foam." },
+    { "name": "Latte", "price": "£3.40", "desc": "Creamy coffee with steamed milk and a light foam." },
+    { "name": "Flat White", "price": "£3.30", "desc": "Velvety coffee with a strong espresso base." },
+    { "name": "Mocha", "price": "£3.60", "desc": "Chocolate-flavoured coffee with steamed milk." },
+    { "name": "Hot Chocolate", "price": "£3.20", "desc": "Smooth and rich chocolate drink." },
+    { "name": "Tea", "price": "£2.20", "desc": "English Breakfast / Herbal" }
+  ],
+  "food": [
+    { "name": "Ham & Cheese Sandwich", "price": "£4.20", "desc": "Freshly made sandwich with ham and melted cheese." },
+    { "name": "Chicken Wrap", "price": "£4.80", "desc": "Grilled chicken with fresh salad in a soft wrap." },
+    { "name": "Falafel Wrap (Vegan)", "price": "£4.50", "desc": "Crispy falafel with fresh vegetables and sauce." },
+    { "name": "Tuna Melt", "price": "£4.60", "desc": "Tuna with melted cheese on toasted bread." },
+    { "name": "Avocado Toast", "price": "£4.80", "desc": "Smashed avocado on toasted sourdough." },
+    { "name": "Lentil Soup", "price": "£3.50", "desc": "Warm and hearty homemade soup." }
+  ],
+  "specials": [
+    { "name": "Biscoff Latte", "price": "£3.90", "desc": "Sweet and spiced latte with Biscoff flavour." },
+    { "name": "Halloumi Wrap", "price": "£5.00", "desc": "Grilled halloumi with fresh salad and sauce." },
+    { "name": "Soup & Sandwich Deal", "price": "£6.50", "desc": "Any soup served with a sandwich of your choice." },
+    { "name": "Iced Frappe", "price": "£3.80", "desc": "(Chocolate / Vanilla) Cold blended drink, perfect for warmer days." }
+  ]
+}
+

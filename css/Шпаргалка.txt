@@ -1,0 +1,99 @@
+. Шрифты
+px	rem
+12px	0.75rem
+14px	0.875rem
+16px	1rem
+18px	1.125rem
+20px	1.25rem
+24px	1.5rem
+32px	2rem
+48px	3rem
+2. Отступы (padding / margin)
+px	rem
+4px	0.25rem
+8px	0.5rem
+12px	0.75rem
+16px	1rem
+20px	1.25rem
+24px	1.5rem
+32px	2rem
+40px	2.5rem
+3. Скругления углов (border-radius)
+px	rem
+2px	0.125rem
+4px	0.25rem
+6px	0.375rem
+8px	0.5rem
+12px	0.75rem
+16px	1rem
+4. media
+TABLET ===== 768px-48rem
+MOBILE ===== 480px-30rem
+
+1️⃣ Padding (внутренние отступы)
+Блок / элемент	        Рекомендуемый px	rem	            Комментарий
+Текстовый параграф	    16px	            1rem	        Базовый padding, чтобы текст «дышал»
+Кнопка	                12px 24px	        0.75rem 1.5rem	Вертикальный / горизонтальный padding для удобной кнопки
+Карточка (card)	        16px 16px	        1rem 1rem	    Обычный внутренний отступ вокруг контента
+Секция	                32px 24px	        2rem 1.5rem	       Внутренние отступы, чтобы контент не прилипал к краям
+Инпуты / формы	        8px 12px	        0.5rem 0.75rem	Удобная зона для текста
+2️⃣ Margin (внешние отступы)
+Блок / элемент	        Рекомендуемый px	rem	            Комментарий
+Текстовый параграф	    16px	            1rem	        Между строками или параграфами
+Кнопка	                16px	            1rem	        Расстояние между кнопками или блоками
+Карточка (card)	        24px 16px       	1.5rem 1rem	    Вертикальный / горизонтальный margin между карточками
+Секция	                32px 0	            2rem 0	        Отделение секций друг от друга
+Инпуты / формы	        12px 0	            0.75rem 0	    Вертикальный отступ между полями формы
+3️⃣ Мини-правила
+
+Padding — внутрь блока, чтобы контент не прилипал к краям.
+
+Margin — наружу блока, чтобы разделять элементы.
+
+Вертикальные отступы чаще больше горизонтальных (особенно у секций и карточек).
+
+Используем rem, чтобы всё масштабировалось с базовым шрифтом (html { font-size: 16px; }).
+
+Для тонкой подгонки можно комбинировать calc():
+
+padding: calc(1rem - 2px);
+
+Правило “когда em, когда rem”
+
+em — локальные пропорции относительно родителя (текст, padding, элементы в карточке)
+
+rem — глобальные пропорции относительно root (html) (основные шрифты, отступы секций, размеры блоков)
+
+100vw - 100% ширина экрана 
+100vh -100% высоты экрана vmax vmin
+
+lvh / svh - большая / маленькая высота для мобильников
+dvh динамическая высота просмотра
+ grid
+body{
+    display: grid;
+    align-items: start;
+    column-gap: 1rem;
+    grid-template-columns: 16rem auto;
+}
+-----------Button colors--------------------------------
+Simple Rule Designers Use
+
+For buttons:
+
+State	Change
+Normal	original colour
+Hover	10–15% darker
+Click	20–25% darker
+Example:
+
+State		HSL			Explanation
+Default		hsl(25, 33%, 33%)	normal
+Hover (-10%)	hsl(25, 33%, 30%)	slightly darker
+Active (-20%)	hsl(25, 33%, 26%)	more pressed
+
+So the calculation is simple:
+
+33% - 3% ≈ 10% darker
+33% - 7% ≈ 20% darker
+

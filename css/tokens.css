@@ -1,0 +1,147 @@
+/* ============================================ */
+/* =================2- TOKENS =================== */
+/* ============================================ */
+/* дизайн-токены (цвета, шрифты, отступы) */
+@font-face {
+  font-family: 'Playfair Display Variable';
+  src: url('/assets/fonts/PlayfairDisplay-Variable.woff2') format('woff2');
+  font-weight: 400 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nunito Sans Variable';
+  src: url('/assets/fonts/NunitoSans-Variable.woff2') format('woff2');
+  font-weight: 200 1000;
+  font-stretch: 75% 125%;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* --- 1. Colors --- */
+  /* Raw color */
+  /*#f5e6d3*/
+  --color-bg-primary-hs: 34 63%;
+  --color-bg-primary-l: 89%;
+
+  /*#6f4e37*/
+  --color-bg-secondary-hs: 25 34%;
+  --color-bg-secondary-l: 33%;
+
+  /*#6b8e23*/
+  --color-accent-hs: 80 60%;
+  --color-accent-l: 35%;
+
+  /* Backgrounds*/
+  /* 60% x 30% x 10% */
+  --color-bg-primary: hsl(var(--color-bg-primary-hs) var(--color-bg-primary-l));
+  --color-bg-secondary: hsl(
+    var(--color-bg-secondary-hs) var(--color-bg-secondary-l)
+  );
+  --color-accent: hsl(var(--color-accent-hs) var(--color-accent-l));
+
+  /* Surface/Cards */
+  --color-bg-surface: hsl(var(--color-bg-primary-hs) 95%);
+
+  /* Interactive */
+  --color-accent-hover: hsl(var(--color-accent-hs) 45%);
+  --color-accent-active: hsl(var(--color-accent-hs) 28%);
+
+  --color-bg-secondary-hover: hsl(var(--color-bg-secondary-hs) 40%);
+  --color-bg-secondary-active: hsl(var(--color-bg-secondary-hs) 25%);
+
+  /* Typography */
+  --color-text-main: hsl(0, 0%, 20%);
+  --color-text-muted: hsl(0, 0%, 60%);
+  --color-text-title: var(--color-bg-secondary);
+  --color-text-on-dark: hsl(var(--color-bg-primary-hs) 98%);
+
+  /* Borders & Dividers */
+  --color-border: hsl(
+    var(--color-bg-secondary-hs) var(--color-bg-secondary-l) / 0.15
+  );
+
+  /* --- Status Colors --- */
+  --color-success: hsl(120, 39%, 49%);
+  --color-warning: hsl(36, 100%, 50%);
+  --color-error: hsl(4, 90%, 58%);
+  --color-info: hsl(207, 90%, 54%);
+
+  /* --- 2. Typography --- */
+
+  --type-scale: 1.25;
+  /* Резиновый коэффициент (на мобилках 1.15, на десктопе 1.25)  */
+  --step-0: clamp(1rem, 0.738rem + 0.55vw, 1.25rem);
+  /* Авто-расчет всех шагов */
+  --step-1: calc(var(--step-0) * var(--type-scale));
+  --step-2: calc(var(--step-1) * var(--type-scale));
+  --step-3: calc(var(--step-2) * var(--type-scale));
+  --step-4: calc(var(--step-3) * var(--type-scale));
+  --step-5: calc(var(--step-4) * var(--type-scale));
+
+  --font-family-title: 'Playfair Display Variable', serif;
+  --font-family-base: 'Nunito Sans Variable', sans-serif;
+  --font-size-base: var(--step-0);
+}
+
+@media (max-width: 768px) {
+  :root {
+    /* Уменьшаем только коэффициент. 
+       Все шаги (1-5) пересчитаются автоматически! */
+    --type-scale: 1.15;
+  }
+}
+
+:root {
+  --line-height-base: 1.5;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+
+  --heading-font-weight: 700;
+  --heading-line-height: 1.2;
+  --heading-letter-spacing: 0.02em;
+
+  /* --- 3. Spacing & Radii  --- */
+  --gutter: clamp(1rem, 5vw, 3rem);
+  --spacing-section: calc(var(--gutter) * 2);
+  --spacing-section-lg: calc(var(--gutter) * 3);
+
+  --spacing-1: 0.25rem; /* 4px  */
+  --spacing-2: 0.5rem;  /* 8px  */
+  --spacing-3: 0.75rem; /* 12px */
+  --spacing-4: 1rem;    /* 16px (Base) */
+
+  --spacing-6: 1.5rem;  /* 24px */
+  --spacing-8: 2rem;    /* 32px */
+
+  --spacing-10: 2.5rem; /* 40px */
+  --spacing-12: 3rem;   /* 48px */
+  --spacing-16: 4rem;   /* 64px */
+  --spacing-20: 5rem;   /* 80px */
+  --spacing-24: 6rem;   /* 96px */
+  --spacing-32: 8rem;   /* 128px */
+
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+
+  /* --- 4. Shadows & Transitio --- */
+  --shadow-sm: 0 1px 2px hsla(var(--color-bg-secondary-hs) 10% / 0.1);
+  --shadow-md: 0 4px 6px hsla(var(--color-bg-secondary-hs) 10% / 0.15);
+  --shadow-lg: 0 10px 15px hsla(var(--color-bg-secondary-hs) 10% / 0.2);
+
+  --transition-fast: 0.15s ease-in-out;
+  --transition-base: 0.3s ease-in-out;
+  --transition-slow: 0.5s ease-in-out;
+
+  /* --- 5. Медиа-запросы / брейкпоинты --- */
+  --breakpoint-xs: 320px;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --breakpoint-xxl: 1600px;
+}
