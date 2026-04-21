@@ -19,7 +19,7 @@ main {
   content: '';
   position: absolute;
   inset: 0;
-  background: url('assets/images/top.png') center/cover no-repeat;
+  background: url('../assets/images/top.png') center/cover no-repeat;
   opacity: 1;
   z-index: -1;
 }
