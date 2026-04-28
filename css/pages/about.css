@@ -42,6 +42,10 @@ h1 {
   justify-content: center;
 }
 
+.about-wraper p {
+  text-align: justify;
+}
+
 .picture {
   flex-grow: 1;
   flex-basis: 500px;
