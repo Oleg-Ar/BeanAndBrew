@@ -72,6 +72,7 @@ main {
   cursor: pointer;
   margin-top: calc(var(--gutter) * 2);
   margin-left: var(--spacing-1);
+  margin-bottom: var(--spacing-1);
   transition:
     background-color var(--transition-fast),
     transform var(--transition-fast);
